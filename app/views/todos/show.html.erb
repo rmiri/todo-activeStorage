@@ -4,6 +4,9 @@
   <strong>Task:</strong>
   <%= @todo.task %>
 </p>
+<p> 
+ <%= image_tag(@todo.picture, width: 200) if @todo.picture.attached? %>
+</p>
 
 <%= link_to 'Edit', edit_todo_path(@todo) %> |
 <%= link_to 'Back', todos_path %>
